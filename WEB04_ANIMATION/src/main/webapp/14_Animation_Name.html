@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+        #green{width:200px; height:200px; border:1px solid red; background:green; margin:100px; animation-name:ani_green;
+            animation-duration: 2s;}
+        #purple{width:200px; height:200px; border:1px solid red; background:purple; margin:100px; animation-name:ani_purple;
+            animation-duration: 2s;}
+
+        @keyframes ani_green {
+            from{}
+            to{
+                border-radius: 50%;
+            }
+        }
+        @keyframes ani_purple {
+            from{}
+            to{
+                transform:rotate(45deg);
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <!-- 애니메이션 키프레임을 이요하여 하나는 border-radius 가 모두 50%로 변하는
+    애니메이션을 하나는 시계바향으로 약 45도 회전하는 애니메이션을 만들고, 두개의 div 에 적용하세요 기타 사항은 화면에
+    표시된 내용을 기본으로 합니다. -->
+    <div id="green"></div>
+    <div id="purple"></div>
+</body>
+</html>

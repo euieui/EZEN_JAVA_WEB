@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17_Animation_EX02.html</title>
+</head>
+<style type="text/css">
+    body{margin:0; overflow-x:hidden;}
+    #box1{position:relative; animation-name: moving; animation-duration: 8s; /* animation-direction: alternate; */
+    /* animation-iteration-count: infinite; */  left:500px; top:100px;}
+    .pers{
+            perspective:1000px; /* px가 줄으면 가까이에서 본다 */
+            /*-moz-perspective:300px;
+            -ms-perspetive:300px;
+            -webkt-perspective:300px;*/
+        }
+
+    @keyframes moving{
+        from{
+            width:400px; height:100px;  background:#ff9400;  transform:rotateY(-180deg); transform-origin: left;
+        }
+        to{
+            width:400px; height:100px;  background:#ff9400; transform:rotateY(180deg); transform-origin:right;
+        }
+    }
+</style>
+<body>
+    <div class="pers">
+        <div id="box1"><h3>CSS3 Animation</h3></div>
+    </div>
+    
+</body>
+</html>

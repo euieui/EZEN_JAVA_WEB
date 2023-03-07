@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_Transform_Scale.html</title>
+
+    <style type="text/css">
+        .origin{width:210px; height:200px; border:1px solid black; float:left; margin:40px; overflow:hidden;}
+        .scalex{transition:1s;}
+        .scaley{transition:1s;}
+        .scalexy{transition:1s;}
+
+        .scalex:hover{transform:scalex(1.2);}
+        .scaley:hover{transform:scaley(1.2);}
+        .scalexy:hover{transform:scale(1.2);}
+    </style>
+
+</head>
+<body>
+
+    <div class="origin">
+        <div class="scalex"><img src="images/fruit.jpg"></div>
+    </div>
+    <div class="origin">
+        <div class="scaley"><img src="images/fruit.jpg"></div>
+    </div>
+    <div class="origin">
+        <div class="scalexy"><img src="images/fruit.jpg"></div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12_Transfomr_Rotate_3D.html</title>
+
+    <style type="text/css">
+        .pers, .no-pers{width:152px; height:180px; border:1px solid black; float:left; margin:30px;}
+        .s{transition:0.5s;}
+        .rotatex img:hover{transform:rotateX(50deg);}
+        .rotatey img:hover{transform:rotateY(50deg);}
+        /* 3d로 누운거야 x축으로 아래는 앞으로 나오고 뒤에는 누은거 */
+        .pers{
+            perspective:300px; /* px가 줄으면 가까이에서 본다 */
+            /*-moz-perspective:300px;
+            -ms-perspetive:300px;
+            -webkt-perspective:300px;*/
+        }
+        
+    </style>
+
+</head>
+<body>
+    
+    <h4>원본이미지</h4>
+    <div><img src="images/sunset.jpg" alt=""></div>
+    <div class="no-pers">
+        <div class="rotatex"><img src="images/sunset.jpg" class="s"></div>
+    </div>
+    <div class="pers">
+        <div class="rotatex"><img src="images/sunset.jpg" class="s"></div>
+    </div>
+    <div class="pers">
+        <div class="rotatey"><img src="images/sunset.jpg" class="s"></div>
+    </div>
+
+</body>
+</html>
