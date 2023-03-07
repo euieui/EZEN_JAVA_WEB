@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--  
+	박스모델 구성요소
+		- padding : 박스내부의 (이미지, 텍스트 등)과 border사이의 공간 (내부여백)
+		- border: 외곽선
+		- margin : 외곽선과 다른개체 사이의 공간(외부여백)
+ -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>13_BoxModel</title>
+
+<style type = "text/css">
+	.box{ width:170px; height:100px; border:10px solid blue;
+	margin-bottom:30px; padding-left:30px; padding-top:30px;}
+	/* padding 값은 전체 크기에 합산됩니다 따라서. box의 실제 크기는 너비+선+패딩
+	width:220px, height:150px로 봐야합니다.  ////-- 읭? 패딩은 내부 아냐? 추가되는거네! 소름*/
+	/* ///--- 오 크롬에서 검사로 애들 사이즈를 검사 할 수 있겠구나 어 ? 박스만 그런가? 다른거해보자*/
+	
+</style>
+
+</head>
+<body>
+<div class="box">박스 모델1</div>
+<div class="box">박스 모델2</div>
+
+</body>
+</html>

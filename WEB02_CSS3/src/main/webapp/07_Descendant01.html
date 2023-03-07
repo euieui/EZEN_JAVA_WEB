@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--  
+* 후손선택자 : 특정한 태그 아래에 있는 후손을 선택할 때 사용하는 선택자.
+* id의 사용을 남용하지 않고 상대적 위치로 Selector를 사용합니다.
+-->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>07_Descendant01 - 후손선택자</title>
+
+<style type="text/css">
+	#section h1{color:blue;}
+	/* 빈칸(공백)으로 선택자가 이어지면, 아래에 포함되어 있는 child 선택지를 모두 지목하게 됩니다.*/	
+	/* ////--- 그니까 section 안에 있는 h1원들이 적용이된다는거군 */
+	#header h1{color: red;}
+	#header h1, header h3 {background:yellow;}
+	/* ',' 로 구분하면 두개의 후손선택자를 동시 선택 가능합니다.
+		#header h1, h3 -> header 내부의 h1과 h3가 아니라, header 내부의 h1과 내부외부 폼함 모든 h3라는 뜻입니다. 
+	///--- 위에말 당연하지 근데 조심해라	 */
+	
+	
+</style>
+
+</head>
+<body>
+	<div id="header">
+		<h1 class="title">회사 이름/로고</h1>
+		<div id="nav">
+			<h1>Navigation</h1><h2>header 2</h2><h3>CSS3</h3>
+		</div>
+	</div>
+	<div id="section">
+		<h1 class="title">Aside</h1>
+		<p><h1 class="title">Aside</h1>대통령의 임기는 5년으로 하며, 중임할 수 없다. 
+		모든 국민은 법 앞에 평등하다. 누구든지 성별·종교 또는 
+		사회적 신분에 의하여 정치적·경제적·사회적·문화적 생활의 모든 영역에 있어서 차별을 받지 아니한다.</p>
+		<h1 class="title">Aside</h1>
+	</div>
+</body>
+</html>

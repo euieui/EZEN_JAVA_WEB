@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>09_HoverEx</title>
+
+<style type="text/css">
+#base{width:250px; height:1000px; background:#595959; border:1px solid sivler;}
+#top{width:100%; height:150px; border:1px solid blue;}
+.menuall{ width:100%; height:40px; border:1px solid yellow; background:#232323;
+				color:white; line-height:0px; text-align:center;}
+.submenuall{ width:100%; height:0px; background:#595959; border:1px solid red;}
+
+.menuall:hover{color:orange;}
+.menuall:hover+.submenuall{ height:100px; transition-duration:1s;}	/*  hover 다른 부모 밑에 있거나 그러면 힘들다는데 ?	자바스크립트에서 배우면되겠다*/
+.sumenuall:hover{ height:100px; transition-duration:1s;}  /* transition-duration 은 저 위에다가 쓰는게 더 좋을 것 같아 */
+.sumenuall:hover+.menuall{color:orange;}	
+</style>	
+
+</head>
+<body>
+<!-- 각 메뉴에 마우스를 올리면 부메뉴가 100px 만큼 펼쳐지게 해주세요
+각 메뉴의 글자색은 오렌지색으로 변경해주세요 
+각 동작은 1초간 진해오디게 코딩해주세요-->
+	<div id="base">
+		<div id="top"></div>
+		<div id="menu1" class="menuall"><h2>NEWS</h2></div>
+		<div id="submenu1" class="submenuall"></div>
+		<div id="menu2" class="menuall"><h2>PORTPOLIO</h2></div>
+		<div id="submenu1" class="submenuall"></div>
+		<div id="menu3" class="menuall"><h2>BOARD</h2></div>
+		<div id="submenu1" class="submenuall"></div>
+		<div id="menu4" class="menuall"><h2>ALBUM</h2></div>
+		<div id="submenu1" class="submenuall"></div>
+		<div id="menu5" class="menuall"><h2>CONTACT</h2></div>
+		<div id="submenu1" class="submenuall"></div>
+	</div>
+
+</body>
+</html>
