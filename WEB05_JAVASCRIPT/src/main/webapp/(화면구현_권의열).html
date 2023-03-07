@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(화면구현_권의열).html</title>
+
+    <style type="text/css">
+        body{margin:0; background: #eeeeee;}
+        #box{position:relative; width:490px; height:300px; background:white; margin:0 auto;}
+        #view{position:relative; width:400px; height:250px;  top: 30px;
+            left: 55px;}
+            #title{position:absolute; width:400px; height:34px; border-bottom: 1px dashed gray; font-weight:bold;
+            font-size:125%; }
+            .movie{position:absolute; width:400px; height:34px; border-bottom:1px dashed gray;   overflow:hidden;  }
+            .name{position:absolute; color:blue; font-weight:bold; font-size:90%; line-height:34px; }
+            .img{position:absolute; height:90px; width:65px; overflow: hidden;  top:10px; left:-67px;}
+            .img2{position:absolute; height:34px;  vertical-align: middle; right:0px; top:6px;}
+            ul{position:absolute; list-style: none; padding:0; margin: 0; left:75px; top:35px;}
+            li{font-size:70%; margin-top:8px;}
+            .slide{position:absolute; height:35px; border-bottom:1px solid gray; width:325px; left: 75px;}
+            
+            #image1{left:0px;}
+            #name2{left:-75px;}
+            #name3{left:-75px;}
+            #name4{left:-75px;}
+            
+            #move1{top:35px;}
+            #move2{top:145px;}
+            #move3{top:180px;}
+            #move4{top:215px;}
+            #move1{height:109px;}
+    </style>
+    <script type="text/javaScript">
+        function action(x){
+            switch(x){
+                case 1:
+                    for(var i = 1 ; i<=4 ; i++){
+                        document.getElementById("image" + i).style.left="-75px";
+                        document.getElementById("name" + i).style.left="-75px";
+                        document.getElementById("move" + i).style.height="34px";
+                    }
+                    document.getElementById("image1").style.left="0px";
+                    document.getElementById("name1").style.left="0px";
+                    document.getElementById("move1").style.height="109px";
+                    document.getElementById("move1").style.top="35px";
+                    document.getElementById("move2").style.top="145px";
+                    document.getElementById("move3").style.top="180px";
+                    document.getElementById("move4").style.top="215px";
+                    break;
+                case 2:
+                    for(var i = 1 ; i<=4 ; i++){
+                        document.getElementById("image" + i).style.left="-75px";
+                        document.getElementById("name" + i).style.left="-75px";
+                        document.getElementById("move" + i).style.height="34px";
+                    }
+                    document.getElementById("image2").style.left="0px";
+                    document.getElementById("name2").style.left="0px";
+                    document.getElementById("move2").style.height="109px";
+                    document.getElementById("move1").style.top="35px";
+                    document.getElementById("move2").style.top="70px";
+                    document.getElementById("move3").style.top="180px";
+                    document.getElementById("move4").style.top="215px";
+                    break;
+                case 3:
+                    for(var i = 1 ; i<=4 ; i++){
+                        document.getElementById("image" + i).style.left="-75px";
+                        document.getElementById("name" + i).style.left="-75px";
+                        document.getElementById("move" + i).style.height="34px";
+                    }
+                    document.getElementById("image3").style.left="0px";
+                    document.getElementById("name3").style.left="0px";
+                    document.getElementById("move3").style.height="109px";
+                    document.getElementById("move1").style.top="35px";
+                    document.getElementById("move2").style.top="70px";
+                    document.getElementById("move3").style.top="105px";
+                    document.getElementById("move4").style.top="215px";
+                    break;
+                case 4:
+                    for(var i = 1 ; i<=4 ; i++){
+                        document.getElementById("image" + i).style.left="-75px";
+                        document.getElementById("name" + i).style.left="-75px";
+                        document.getElementById("move" + i).style.height="34px";
+                    }
+                    document.getElementById("image4").style.left="0px";
+                    document.getElementById("name4").style.left="0px";
+                    document.getElementById("move4").style.height="109px";
+                    document.getElementById("move1").style.top="35px";
+                    document.getElementById("move2").style.top="70px";
+                    document.getElementById("move3").style.top="105px";
+                    document.getElementById("move4").style.top="140px";
+                    break;
+
+            }
+
+        }
+    </script>
+
+</head>
+<body>
+    <!-- box 490 / 300 -->
+    <!-- 정가운데가 아님 -->
+    <!-- 위 30 정도 margin left 55 right 35 bottom 20 정도 -->
+    <!-- img 65/90 -->
+    <!-- 한칸 400/35정도 -->
+    <!-- css로만 하다가 9월7일 배운 스크립트 ImageControll 적용해보기 -->
+    <!--
+        배운점 
+        css -> hover가 어미를 적용 못함!
+        JavaScript 위의 단점을 보완함 쉽게 이용할 수 있음
+    -->
+    <div id="box">
+        <div id="view">
+            <div id="title">개봉영화 평점</div> 
+            <div class="movie" id="move1" onmouseover="action(1)">
+                <div class="img" id="image1"><img src="images2/movie1.png" width="65"></div>
+                <div class="slide">
+                    <div class="name" id="name1">맨 인 더 다크2</div>
+                </div>
+                <div class="img2"><img src="images2/movie12.png"></div>
+                <div class="text">
+                    <ul>
+                        <li>메가박스 대전탄방 1관 제일뒤쪽 혼자보러온 안경쓴 아줌마 몇...</li>
+                        <li>ㅋㅋ할아버지 능력치 미친 거 같음ㅋㅋㅋㅋ보는 내내 너무너무...</li>
+                        <li>아니 할아버지 걍 눈 안보이는 존윅임 진자 스릴감 미쳤음 1편...</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="movie" id="move2" onmouseover="action(2)">
+                <div class="img" id="image2"><img src="images2/movie2.png" width="65"></div>
+                <div class="slide">
+                    <div class="name" id="name2">코다</div>
+                </div>
+                <div class="img2"><img src="images2/movie22.png"></div>
+                <div class="text">
+                    <ul>
+                        <li>올해의 영화입니다 꼭 보세요. 마스크는 꼭 새거 챙겨가세요. ...</li>
+                        <li>귀로 들으려고 갔다가 마음 뭉클해져서 온 영화. 눈물이 확 쏟...
+                        <li>오랜만에 보는 힐링영화... 최근 본 영화 중 가장 여운이 남는 것...</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="movie" id="move3" onmouseover="action(3)">
+                <div class="img" id="image3"><img src="images2/movie3.png" width="65"></div>
+                <div class="slide">
+                    <div class="name" id="name3">싱크홀</div>
+                </div>
+                <div class="img2"><img src="images2/movie32.png"></div>
+                <div class="text">
+                    <ul>
+                        <li>댓글 알바가 판을 치는군요 보면 압니다..</li>
+                        <li>휴~ 90년대 개그와 cg 긴장감 전혀 없는 재난영화??
+                        <li>기대보다 별로였어요.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="movie" id="move4" onmouseover="action(4)">
+                <div class="img" id="image4"><img src="images2/movie4.png" width="65"></div>
+                <div class="slide">
+                    <div class="name" id="name4">프리 가이</div>
+                </div>
+                <div class="img2"><img src="images2/movie42.png"></div>
+                <div class="text">
+                    <ul>
+                        <li>CG에 돈 진짜 많이 섰겠구나, 스토리도 너무 좋고 레이놀즈 연...</li>
+                        <li>기분이 좋아지는 영화
+                        <li>조조로 별 기대 없이 봤다가 잠도 깨고 뼈도 맞았다! 진정한 프...</li>
+                    </ul>
+                </div>
+            </div>
+        </div>  
+    </div>
+
+</body>
+</html>

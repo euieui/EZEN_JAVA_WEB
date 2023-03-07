@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16_ImageControll05.html</title>
+
+    <script type="text/javaScript">
+        // 1초에 한번씩 이미지가 롤링되게 코딩하되, 이미지위에 마우스가 올라가면 롤링 멈춤, 마우스가 빠져나가면 롤링 다시 시작
+        var number=0;
+        var timer;
+       
+
+        function start(){
+            timer = window.setInterval(function(){
+                number++;
+                document.getElementById("target").src="images/"+number+".jpg";
+                if(number==10) number=0;
+            }, 1000);
+        }
+        function stop(){
+            window.clearInterval(timer); // 인터벌 종료 구분
+            /* ///---- clearInterval() 알아두자 */
+
+        }
+
+    </script>
+
+</head>
+<body onLoad="start();"> <!-- 온로드 좋다 이것도 이해하자! -->
+
+    <img src="images/1.jpg" id="target" onmouseover="stop()" onmouseout="start()">
+    
+</body>
+</html>

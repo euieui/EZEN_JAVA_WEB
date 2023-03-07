@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_Contrll_IF.html</title>
+
+    <script type="text/JavaScript">
+        /* 
+        1. if 조건문 */
+        var date = new Date();
+        // 자바스크립트의 내장 라이브러리중 날짜 객체를 생성하는 명령. 자바스크립트에도 자바와 같이 활용할 주요 내장 클래스들이
+        // 존재합니다. 새로운 객체를 생성하기 위해 new 는 명령과 함께 객체를 생성하여 사용합니다.
+
+        // 자바스크립트의 if 문의 사용은 자바에서의 사용과 똑같습니다,
+        var hour = date.getHours();
+        if(hour < 11){
+            alert(hour+'시 : 아침 먹을 시간입니다.');
+        }else if(hour < 15){
+            alert(hour+'시 : 점심 먹을 시간입니다.');
+        }else{
+            alert(hour+'시 : 저녁 먹을 시간입니다.');
+        }
+        alert(hour + "시");
+        var min = date.getMinutes();
+        alert(min +"분");
+        var sec =date.getSeconds();
+        alert(sec +"초");
+        var year =date.getFullYear();
+        // getYaer() 함수는 원래 년도에서 1990년을 뺀 값을 리턴함
+        // getYear() 함수는 웹 표준에서 제거(Deprecated) 되었음
+        // getFullYear() 로 대체 되어 사용중
+        alert(year +"년");
+        var month =date.getMonth();
+        alert((month + 1) + '월');
+        var date1 = date.getDate();
+        alert(date1 + '일');
+        var week = date.getDay();
+        // 0:일요일, 1:월요일, 2:화요일.... 6:토요일
+        if(week==1) alert('월요일');
+        else if(week==2) alert('화요일');
+        else if(week==3) alert('수요일');
+        else if(week==4) alert('목요일');
+        else if(week==5) alert('금요일');
+        else if(week==6) alert('토요일');
+        else alert('일요일');
+
+        /* 2. switch 문 */
+        var input = Number(prompt('숫자를 입력하세요.', '숫자'));
+        switch(input % 2){
+            case 0:
+                alert('짝수입니다.');
+                break;
+            case 1:
+                alert('홀수입니다.');
+                break;
+            default : // if 문의 else 와 같은 역할의 명령입니다.
+                alert('숫자가 아닙니다.');
+                break;
+        }
+
+        /* 월과 일을 입력 받아 요일을 출력하는 코드를 작성하세요
+        요일은 2021년에 한해서만 계산하되, 2021년 1월 1일은 금요일 인것을 기준으로 코드를 작성합니다.
+        if 또는 switch 를 사용하세요
+        입력을 받기위한 prompt 명령의 디폴트값(처음에 미리 입력된 값)은 오늘날짜의 월과 일을 표시해주세요*/
+
+        var date = new Date();
+        var tm = date.getMonth() + 1;
+        var td = date.getDate();
+        // 월 입력
+        var m = Number(prompt("월을 입력하세요",String(tm)));
+        // 일 입력
+        var d = Number(prompt("일을 입력하세요 ",String(td)));
+        // 입력된 월의 전날까지 날짜 합산 
+        var sum = 0;
+        switch(m){
+            case 12 : sum +=30;
+            case 11 : sum +=31;
+            case 10 : sum +=30;
+            case 9 : sum +=31;
+            case 8 : sum +=31;
+            case 7 : sum +=30;
+            case 6 : sum +=31;
+            case 5 : sum +=30;
+            case 4 : sum +=31;
+            case 3 : sum +=28;
+            case 2 : sum +=31;
+        }
+        // 입력된 일을 날짜에 합산
+        sum = sum +d;
+        // 총 날짜수를 7로 나눈 나머지 계산 나머지에 따라 계산
+        var s = m + "월 " + d +"일은 ";
+        if(sum%7 == 1) alert('금요일');
+        else if(sum%7==2) alert('토요일');
+        else if(sum%7==3) alert('일요일');
+        else if(sum%7==4) alert('월요일');
+        else if(sum%7==5) alert('화요일');
+        else if(sum%7==6) alert('수요일');
+        else alert('목요일');
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

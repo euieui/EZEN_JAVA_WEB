@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17_ImageControll05.html</title>
+
+    <style type="text/css">
+        #a1 {position:absolute; width:170px; height:255px; border:2px solid black;
+        top:100px; left:100px;}
+    </style>
+
+    <script type="text/javaScript">
+        var aa=0;
+        var bb;
+        
+        function rotate(){
+            aa +=20;
+            document.getElementById("a1").style.webkitTransform='rotate(' + aa + 'deg)';
+        } 
+
+        // setInterval 을 이용해서 1초에 20도씩 회전하게 해주세요. 마우스를 올리면 반대방향으로 회전. 마우스가 빠져나가면 원래방향으로 회전
+        function start(){
+            window.clearInterval(bb);
+            bb = setInterval(function(){
+                    aa += 20;
+                    document.getElementById("a1").style.webkitTransform='rotate('+ aa +'deg)';
+                }, 1000)
+        }
+
+        function reverse(){
+            window.clearInterval(bb);
+            bb = setInterval(function(){
+                    aa -= 20;
+                    document.getElementById("a1").style.webkitTransform='rotate('+ aa +'deg)';
+                }, 1000)
+        }
+    </script>
+
+</head>
+<body onLoad="start();">
+    <div id="a1" onClick="rotate()" onmouseout="start()" onmouseover="reverse()">
+        <img src="images/1.jpg"  >
+    </div>
+</body>
+</html>

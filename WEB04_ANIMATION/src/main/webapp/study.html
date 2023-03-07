@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+<style type="text/css">
+#base{position:relative; width:800px; border:1px solid black; height:300px;}
+#tire{position:relative; width:200px; height:200px; background:red; font-size:1em; color:white; border-radius:50%; top:50px; 
+	text-align:center; line-height:200px; transition:2s;}
+#base:hover #tire{transform:translateX(400px) rotate(180deg) scale(1.5); }
+
+</style>
+</head>
+<body>
+	<div id="base">
+		<div id="tire">타이어</div>
+	</div>
+</body>
+</html>
