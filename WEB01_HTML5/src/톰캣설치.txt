@@ -1,0 +1,10 @@
+援ш� tomcat download ->tomcat 9 service installer
+
+�ы�몃��멸� �ㅻ�쇳�댁�대�� 異⑸������ 8080-> 8090蹂�寃� -> 留�吏�留� 泥댄�� 2媛��� ����
+
+�댄�대┰�ㅼ�� �곌껐
+�댄�대┰�ㅼ���� servers->�대┃ -> apach ->9.0 ->browse -> tomcat �ㅼ� ��移� ->tomcat9.0 ->�대������ 
+Web01_HTML5 瑜� ��踰��� ��湲곌� finish
+肄���李쎌そ�� server ��釉��대┃ admin port瑜� 9005 �ｌ�� ctrl s 濡� ����
+
+
