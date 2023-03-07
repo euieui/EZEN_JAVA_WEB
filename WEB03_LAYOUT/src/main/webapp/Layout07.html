@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Layout07</title>
+
+	<style type="text/css">
+		body{width:2000px; height:2000px;}
+		#first{position:relative; width:100%; background:#F8FA68; height:100px;}
+			#first_title{position:relative; width:398px; height:48px; margin:0 auto; border:1px dotted black; line-height:50px;}
+			#first_text{position:relative; width:398px; height:48px; margin:0 auto; border:1px dotted black; text-align:left; font-size:70%;}
+		#second{position:relative; width:100%; background:#FCD498; height:600px;}
+			#second_base1{position:relative; width:1100px; height:600px; margin:0 auto; background:#ADFA8F}
+			/* 강사님 second_base1 은 view 라 지정함*/
+			#second_base2{position:relative; width:348px; border:1px solid black; height:598px; float:left; margin-right:25px;}
+			#second_base2:last-child{margin-right:0px;}
+			/* 강사님 second_base1 은 rect 라 지정함*/
+				.image{position:relative; width:348px; height:300px; overflow:hidden;}
+				 #second_textBase{position:relative; width:300px; height:280px; bottom:50px; background:white; left:24px; 
+				 		box-shadow:1px 1px 2px 1px gray;}	
+				 #button{position:relative; height:30px; width:100px; background:blue; float:right; bottom:65px; line-height:30px;}
+				 		#second_title{position:relative; width: 278px; height:78px; 	border:1px dotted black; margin:0 auto; line-height:80px;}		
+				 		.second_text{width: 278px; height:198px; border:1px dotted black; margin:0 auto;}
+		.button_font{color:white; text-align:center; font-weight:bold;}
+		.title{text-align:center; font-weight:bold; font-size:1.5em;}
+	</style>
+	
+	<!-- /////---- 엄청나게 중요함 브라우저 확대 하거나 축소하면 모든게 뒤틀려진다 ? 이걸 어케 막을까??? -->
+
+</head>
+<body>
+<!-- 1100px 600px  위에 100px--  그림 세로 300px;-->
+
+
+	<div id="first">
+		<div id="first_title" class="title">Content04 Title</div>
+		<div id="first_text">리앋ㅂ르디자륻지ㅏㄹㄷ쥐ㅏㄹㄷ주바ㅣㄹㄷㅈ
+		ㄹㄷㅈ비ㅏ룯지ㅏ룯지ㅏ룯ㅈ비ㅏㄹ둦비ㅏㄹㄷㅂ쥐ㅏ</div>
+	</div>
+	<div id="second">
+		<div id="second_base1">
+			<div id="second_base2">
+				<div class="image"><img src="images/Penguins.jpg" height="300"></div>
+				<div id="second_textBase">
+					<div id="second_title" class="title">Segment Title</div>
+					<div class="second_text">fdsafdsafdsafdsfsdfsdaㄹㅇㄴㅁㄹㅇㄴ
+					ㄹㅇㄴㅁㄹㅇㄴㅁㄹㅇㄴㄹㅇㄴㅁㄹㅇㄴㅁ</div>
+				</div>
+				<div id="button" class="button_font">BUTTON</div>
+			</div>
+			<div id="second_base2">
+				<div class="image"><img src="images/Lighthouse.jpg" height="300"></div>
+				<div id="second_textBase">
+					<div id="second_title" class="title">Segment Title</div>
+					<div class="second_text">fdsafdsafdsafdsfsdfsdaㄹㅇㄴㅁㄹㅇㄴ
+					ㄹㅇㄴㅁㄹㅇㄴㅁㄹㅇㄴㄹㅇㄴㅁㄹㅇㄴㅁ</div>
+				</div>
+				<div id="button" class="button_font">BUTTON</div>
+			</div>
+			<div id="second_base2">
+				<div class="image"><img src="images/Jellyfish.jpg" height="300"></div>
+				<div id="second_textBase">
+					<div id="second_title" class="title">Segment Title</div>
+					<div class="second_text">fdsafdsafdsafdsfsdfsdaㄹㅇㄴㅁㄹㅇㄴ
+					ㄹㅇㄴㅁㄹㅇㄴㅁㄹㅇㄴㄹㅇㄴㅁㄹㅇㄴㅁ</div>
+				</div>
+				<div id="button" class="button_font">BUTTON</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

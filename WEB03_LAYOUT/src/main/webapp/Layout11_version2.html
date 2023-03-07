@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다음연예 강사님 버전</title>
+
+    <style type="text/css">
+        body{margin:0;}
+        #first{position:relative; width:100%; height:65px; background:#fffccc; border-bottom:1px solid silver;}
+            #first .view{position:relative; width:1100px; height:65px; background:#d4fad5; margin:0 auto;}
+                #first .view .left{position:relative; height:65px; float:left; width:500px; border:1px dotted blue; line-height: 65px;}
+                    #first .view .left ul{list-style: none; padding:0; margin:0; }
+                        #first .view .left ul li{float:left; margin:0 5px; color:gray; }
+                        #first .view .left ul li:nth-child(2){color:black; font-weight:bold; text-align:left; font-size:110%;}
+                        #first .view .left ul li:first-child{margin-left:0;}
+                        img{vertical-align: middle;}
+                /* first 왼쪽 부분 끝 -------------------------------- */
+
+                #first .view .right{position:relative; height:65px; float:right; width:300px; border:1px dotted red;
+                line-height: 65px; text-align:right;}
+                    #first .view .right ul{list-style: none; padding:0; margin:0; display:inline-block;}
+                    #first .view .right ul li{float:left; margin:0 10px;}
+                    #first .view .right ul li:last-child{margin-right:0;}
+        
+        #second{position:relative; width:100%; height:70px; background:#d4e6fa; border-bottom:1px solid silver;}
+            #second .view{position:relative; width:1100px; height:70px; background:rgb(250, 179, 47); margin:0 auto; text-align:left;}
+                #second .view .left{position:relative; float:left; width:500px; height:67px; border:1px dotted blue;        line-height:67px; text-align:left;} /* height70-> 67로 바꿈 */
+                    #second .view .left ul{list-style:none; padding:0; margin:0; display:inline-block;}
+                    #second .view .left ul li{float:left; margin:0 15px; color:gray; font-family:Verdana, Geneva, Tahoma, sans-serif; font-weight:bold; color:black; font-size:120%; cursor:default;}
+                    /* cursor:defalut; 오 이런것도 있다    ///---  여기가 문제였다*/
+                    #second .view .left ul li:first-child{margin-left: 0; border-bottom:4px solid #c469e5;}
+                    
+                    #second .view .left ul li:hover{border-bottom:4px solid #c469e5; color:#c469e5; }
+
+                    #second .view .right{position:relative; float:right; width:300px; height:70px; border:1px dotted red;text-align: right; line-height:70px; font-weight: bold; color:black;}
+
+        #third{position:relative; width:100%; height:570px; background:#d4e6fa; border-bottom:1px solid silver;}
+        /* height : 이미지+뉴스제목(270)*2개 + 윗쪽여백 30px; */
+            #third .view{position:relative; width:1200px; height:570px; background:#edcafa; margin:0 auto;}
+                    #third .view .lbutton{position:relative; width:50px; height:50px;  float:left;
+                    top:260px; border-radius: 50%; background-image:url(images/ico_movie_171115.png);
+                    background-position: -60px -461px;}
+                    #third .view .rbutton{position:relative; width:50px; height:50px;  float:left;
+                    top:260px; border-radius:50%; background-image:url(images/ico_movie_171115.png); background-position:0 -461px;}
+                    /* backgorund-image:url(); backgroud-position:x값 y값 */
+                    #third .view .news{position:relative; width:1100px; height:570px; background:pink; float:left;}
+                        #third .view .news .temp{position:relative; width:1100px; height:30px; border:1px solid black;}
+                        #third .view .news .top{position:relative; width:1100px; height:270px; border:1px solid black;}
+                            #third .view .news .top .newsbox{position:relative; border:1px solid red; width:265px; height:270px; float:left; margin-right:10px;}
+                            #third .view .news .top .newsbox:last-child{margin-right:0px;}
+                                #third .view .news .top .newsbox .img{position:relative; width:265px; height:140px;
+                                border:1px solid blue; border-radius:20px; overflow:hidden;}
+                                #third .view .news .top .newsbox .title{position:relative; width:245px; height:110px;
+                                border:1px solid blue; padding:10px; font-size:105%; color:#565656;}
+                        #third .view .news .bottom{position:relative; width:1100px; height:270px; border:1px solid black;}
+                            #third .view .news .bottom .newsbox{position:relative; border:1px solid red; width:265px; height:270px; float:left; margin-right:10px;}
+                            #third .view .news .bottom .newsbox:last-child{margin-right:0px;}
+                                #third .view .news .bottom .newsbox .img{position:relative; width:265px; height:140px;
+                                border:1px solid blue; border-radius:20px; overflow:hidden;}
+                                #third .view .news .bottom .newsbox .title{position:relative; width:245px; height:110px;
+                                border:1px solid blue; padding:10px; font-size:105%; color:#565656;}
+
+                        
+                    
+                    
+
+                    
+        
+        
+    </style>
+
+</head>
+<body>
+    <div id="first">
+        <div class="view">
+            <div class="left">
+                <ul>
+                    <li><img src="images/logo.png"></li>
+                    <li>연예</li>
+                    <li>뉴스</li>
+                    <li>스포츠</li>
+                    <li>영화</li>
+                    <li>자동차</li>
+                </ul>
+            </div>
+            <div class="right">
+                <ul>
+                    <li><img src="images/log.png"></li>
+                    <li><img src="images/all.png"></li>
+                </ul>    
+            </div>
+        </div>
+    </div>
+
+    <div id="second">
+        <div class="view">
+            <div class="left">
+                <ul>
+                    <li>홈</li>
+                    <li>랭킹</li>
+                    <li>뉴스</li>
+                    <li>TV</li>
+                    <li>포토</li>
+                    <li>투표</li>
+                </ul>
+            </div>
+            <div class="right">TV 브랜드관 ▩</div>
+        </div>
+    </div>
+
+    <div id="third">
+        <div class="view">
+            <div class="lbutton"></div>
+            <div class="news">
+                <div class="temp"></div>
+                <div class="top">
+                    <div class="newsbox">
+                        <div class="img"><img src="images/pr/1.png"></div>
+                        <div class="title">너무 누느라 드아르 자</div>
+                    </div>
+                    <div class="newsbox">
+                        <div class="img"><img src="images/pr/2.png"></div>
+                        <div class="title">아르 자히므다 으라 ㅡ잗 르 ㅡ다 ㅏㅡ드 !</div>
+                    </div>
+                    <div class="newsbox">
+                        <div class="img"><img src="images/pr/3.png"></div>
+                        <div class="title">으라드아 르르 다 ㅏ들 ㅏ3ㅡ라 다그 다그드ㅏ!</div>
+                    </div>
+                    <div class="newsbox">
+                        <div class="img"><img src="images/pr/4.png"></div>
+                        <div class="title">이이아으라드드륻 륻 ㅡㅡ츠 드랃 ㅡㄹ다륻!</div>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="newsbox">
+                        <div class="img"><img src="images/pr/5.png"></div>  
+                        <div class="title">르달 ㅡ3ㅏ들다 ㄹ드3ㅏ1ㅐ배ㅡㅊ 3494ㅜㅡ ㄱ라ㅡ다 드!</div>
+                    </div>
+                    <div class="newsbox">
+                        <div class="img"></div>
+                        <div class="title"></div>
+                    </div>
+                    <div class="newsbox">
+                        <div class="img"></div>
+                        <div class="title"></div>
+                    </div>
+                    <div class="newsbox">
+                        <div class="img"></div>
+                        <div class="title"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="rbutton"></div>
+        </div>
+    </div>
+
+</body>
+</html>

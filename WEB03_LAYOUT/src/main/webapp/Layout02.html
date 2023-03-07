@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Layout02</title>
+
+	<style type="text/css">
+		body{margin:0px;}
+		.base{position:relative; width:100%; border:3px dotted black; height:500px; top:100px; }
+		.box1{position:relative; width:50%; height:500px; background:yellow; /* left:0; */ /* right:50%; */ 
+				float:left;}
+					 /* 두주석은 같은 결과가 나온다 */
+		.box2{position:relative; width:50%; height:400px; background:orange; top:50px; left:-50px; 
+				float:left;}	
+					/* -> bottom:50px; right:50px; 같은 결과가 나온다 */
+					/* 내가 한게 왜 안되었냐면 테두리 때문에 팅겨져 나간거였구나 오오! */
+					/* 이거 굉장히 중요한것같다? */
+	</style>
+	
+</head>
+<body>
+
+	<div class="base">
+		<div class="box1"></div>
+		<div class="box2"></div>
+	</div>
+</body>
+
+</html>

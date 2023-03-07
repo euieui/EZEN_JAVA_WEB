@@ -1,0 +1,77 @@
+<!-- ///--- 느낌표 tap 누르면 자동으로  -->
+<!-- ///--- 태그들이 나옵니다 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- 모바일 크기에 맞추는 것 -->
+    <title>다음 연예</title>
+
+    <style type="text/css">
+        
+        body{margin:0;}
+        img{vertical-align: middle;}
+
+        #first{position:relative; height:59px; width: 100%; margin:0 auto;
+            border:1px solid silver; border-top-style: hidden; border-left-style:hidden; border-right-style: hidden;}
+            #first_title{position:relative; height:59px; width:1100px; margin:0 auto; line-height: 59px; }
+                #logo{position:relative; width:90px; height:59px; float:left; margin-left:5px; }
+                #top_menu{position:relative; width:900px; height:59px; float:left; margin-left:30px;}
+                #top_menu ul{list-style:none; padding:0; margin:0; display:inline-block; }
+                #top_menu ul li{float:left; padding:0 5px; font-weight: bold; color:gray; font-size:90%;}
+                #first_last{position:relative; float:left; background:black; width:50px; height:59px;}
+            
+        #second{position:relative; height:68px; width: 100%; margin: 0 auto; border:2px solid silver; border-top-style: 
+            hidden; border-left-style:hidden; border-right-style: hidden;}
+
+            
+        #third{position:relative; height:580px; background:violet; width:1240px; margin:0 auto;}
+        #left{position:relative; width:70px; height:580px; float:left; background:red; }
+        #base{position:relative; width:1100px;height:580px; float:left; background:blue;}
+        #right{position:relative; width:70px; height:580px; float:left; background:red; }
+    </style>
+
+</head>
+<body>
+    <!-- width 1240 --> <!-- 1100 화살표 각 70 --> <!-- 마지막 45 -->
+    <!-- height 60 70 580 -->
+   
+        
+    <div id="first">
+        <div id="first_title">
+            <div id="logo"><img src="images/pr/daum_logo.png">&nbsp;<img src="images/pr/u.png"></div>
+            <div id="top_menu">
+                <ul>
+                    <li>뉴스</li>
+                    <li>스포츠</li>
+                    <li>영화</li>
+                    <li>자동차</li>
+                </ul>
+            </div>
+            <div id="first_last"></div>
+        </div>
+    </div>
+    <div id="second">
+        <div id="second_menu"></div>
+            <ul>
+                <li>홈</li>
+                <li>랭킹</li>
+                <li>뉴스</li>
+                <li>TV</li>
+                <li>포토</li>
+                <li>투표</li>
+            </ul>
+        <div id="second_last"></div>
+    </div>
+    <div id="third">
+        <div id="left"></div>
+        <div id="base"></div>
+        <div id="right"></div>
+    </div>
+        
+        
+   
+
+</body>
+</html>

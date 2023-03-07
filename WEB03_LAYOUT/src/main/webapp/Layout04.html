@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Layout04</title>
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>	
+	<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+	
+	<style type="text/css">
+		#first{width:100%; height:100px; border: 1px dashed black;}
+		#second{height:100px; width:100%; border: 1px dashed black;}
+		#third{height:600px; width:100%; border: 1px dashed black;}
+		#text1{position:relative; line-height:150px; border:1px solid black; width:200px;	 margin:0 auto; height:100px;}
+		#text2{border:1px solid black; height:100px; width:400px; text-align:left;}	
+		#thirdBase{position:relative; border:1px solid red; width: 900px; height:600px;}
+		#red{position:absolute; background:red; width:700px; height:500px; float:left;}
+		img{position:absolute; width:700px; height:500px; float:left; top:100px; left:200px;}
+		#fourthBase{position:absolute; width:300px; height:300px; box-shadow:2px 2px 2px 1px black; top:200px; left:70px; background:white;}
+		.font{font-family: 'Bree Serif', serif; font-size:24px; font-weight:bold; text-align:center;}
+		#text3{border:1px dashed blue; margin:0 auto; height:100px; width:250px; line-height:100px;}
+		#text4{border:1px dashed blue; margin:0 auto; height:200px; width:250px; text-align:left;}
+		/* ///---하면서 absulute와 relative 정확히 알았지? */
+		/* ///---무슨말이냐면 relative는 어미 공간을 넘어가면 튕겨져 나간다  
+		근데 한번해보자  -> (되긴되는데 칸이 안맞으면 튕겨져나가)*/
+		/* ///--- 또한 HTML 언어 align="center" 쓰지말고 CSS 언어 margin:0 auto; 를 쓰자! 모든 브라우저에서 똑같이 보이게 위해서*/
+		/* 결론은 모든 것은 div 로 쪼개서 만들어야 하는구나*/
+		
+	</style>
+	
+</head>
+<body>
+	
+	<!-- align="center" 넣는 위치 꼭알자 상위에 넣어야 한다 -->
+	<div id="first" >
+		<div id="text1" class="font">Content Title</div>
+	</div>
+	<div id="second" align="center">
+		<div id="text2">대한민국의 영토는 한반도와 그 부속도서로한다.
+		제2항과 제3항의 처분에 대하여는 법원에 제소할 수 없다. 국무회의는 대통령 국무촐리와 15인 이상 30인
+		이하의 국무위원으로 구성한다.</div>
+	</div>
+	<div id="third" align="center">
+		<div id="thirdBase">
+			<div id="red"></div>
+			<img src="images/Penguins.jpg"/>
+				<div id="fourthBase" align="center">
+					<div id="text3" class="font">Segment Title</div>
+					<div id="text4">아니 이건</div>
+				</div>
+		</div>
+	</div>
+	
+	
+</body>
+</html>

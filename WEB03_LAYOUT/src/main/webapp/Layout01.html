@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Layout01</title>
+
+	<style type="text/css">
+		body{margin:0px;}
+		.base{position:relative; width:100%; border:3px dotted black; height:500px; top:100px;}
+		.box1{position:absolute; width:50%; height:500px; background:yellow; /* left:0; */ /* right:50%; */ border:1px solid green;}
+					 /* 두주석은 같은 결과가 나온다 */
+		.box2{position:absolute; width:50%; height:400px; background:orange; top:50px; right:50px; border:1px solid red;}	
+					/* -> bottom:50px; right:50px; 같은 결과가 나온다 */
+	</style>
+	
+</head>
+<body>
+
+	<div class="base">
+		<div class="box1"></div>
+		<div class="box2"></div>
+	</div>
+</body>
+
+</html>
