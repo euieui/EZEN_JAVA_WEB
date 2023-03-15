@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+	<style type="text/css">
+		#base{position:relative; width:170px; height:255px; border:1px solid blue; overflow:hidden }
+        #view{position:absolute; width:850px; height:255px; left:0; top:0; border:1px dashed red; transition:1s;}
+	</style>
+	
+	<script type="text/javascript">
+		var aa = 1;
+		setInterval(function hi(){
+			var dist = -170 * aa;
+			document.getElementById("view").style.left= dist + "px";
+			aa++;
+			if (aa == 4) aa = 0;
+		},	1000)
+	</script>
+</head>
+<body onLoad="hi()">
+	<div id="base">
+		<div id="view">
+			<img src="images/1.jpg"><img src="images/2.jpg"><img src="images/3.jpg"><img src="images/4.jpg"><img src="images/5.jpg">
+		</div>
+	</div>
+</body>
+</html>

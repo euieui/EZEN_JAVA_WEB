@@ -32,7 +32,7 @@
         // fullscreen=no : 전체화면 하지 않음 // channelmode= yes : f11키 기능이랑 같음
         // left=0 : 왼쪽에 창을 고정 (ex. left=30 이런식으로 조절)
         // top=0 : 위쪽에 창을 고정 (ex. top=100 이런식으로 조절)
-        /* var child = window.open('','child1','width=600, height=480'); */
+        var child = window.open('','child1','width=600, height=480'); // 팝업허용해야 뜬다
         // 열린 팝업창을 제어할 레퍼런스 변수들을 만들고 팝업창의 제어권(주소를) 저장합니다.
 
         // window.setInterval() : 일정 시간 간격으로 지정한 동작 또는 함수를 호출 실행합니다
@@ -48,7 +48,7 @@
         } */
         // 선언적 함수를 만들어서 setInterval 안에 익명함수 대신 이름을 넣기도 합니다
         // window.setInterval(abc() , 1000);
-
+	
         var output = '';
         for (var key in window){
             output += '<h1>* ' + key + ' : ' + window[key] + '</h1>';

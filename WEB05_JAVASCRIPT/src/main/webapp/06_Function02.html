@@ -30,17 +30,17 @@
 	var array1 = Array(); // 빈배열을 만듬
 	var array2 = Array(10); // 매개변수 만큼의 크기를 가진 배열을 만듬
 	var array3 = Array(25,35,45,55); // 매개변수를 배열로 만듦
-	document.write("<h1>"+ array1+"<br>" + array2+"<br>" + array3+"<br>" +"</h1>"); 
+	document.write("1. <h1>"+ array1+"<br>2. " + array2+"<br>" + array3+"<br>" +"</h1>"); 
 	
 	
 	// 4. arguments 변수 사용 예제
 	function sumAll(){
-		document.write("<h1>" + typeof(arguments) + ':'+arguments.legnth+ "</h1>");
+		document.write("hi1 <h1>" + typeof(arguments) + ':'+arguments.legnth+ "</h1>");
 		var s ="";
 		for(var i in arguments){
 			s = s + arguments[i] + " ";
 		}
-		document.write("<h1>"+s+"</h1>");
+		document.write("hi <h1>"+s+"</h1>");
 	}
 	// arguments : 전달된 인수들을 arguments 라는 매개 변수로 받아서 객체 또는 배열 처럼 사용할 수 있게 합니다.
 	sumAll(1,2,3,4,5);

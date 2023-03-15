@@ -20,6 +20,7 @@
         var timer;
         var num=0;
         function play(){
+        	window.clearInterval(timer); // 오 내가 추가함
             timer = window.setInterval(function(){
                 var dist = -600 *num;
                 document.getElementById("view").style.left=dist+'px';

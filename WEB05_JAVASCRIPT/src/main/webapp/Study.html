@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+	<script src="script/jquery-3.6.0.js"></script>
+	
+	<script type="text/javascript">
+		function change(){
+			var number = Number(prompt("숫자를 입력하시오.","1"));
+			document.getElementById("target").src="images/" + number + ".jpg";
+		}
+	</script>
+</head>
+<body>
+	<img src="images/1.jpg" id="target" onClick="change()">
+	<!-- onmouseover onClick onmouseout 이런걸 알아야겠네 -->
+</body>
+</html>
